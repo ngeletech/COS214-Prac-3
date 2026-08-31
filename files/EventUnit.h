@@ -3,13 +3,18 @@
 
 #include "EventComponent.h"
 #include <iostream>
+#include <string>
 
 class EventUnit : public EventComponent
 {
+protected:
+    
+    std::string name;
 
 public:
-    
+    explicit EventUnit(const std::string& unitName);
     virtual ~EventUnit() = default;
+    std::string getName() const;
 };
 
 class WaterRide : public EventUnit 

@@ -7,7 +7,6 @@
 
 class KidsRide : public EventUnit {
 private:
-    std::string name;
     int capacity;
     bool isOpen;
 
