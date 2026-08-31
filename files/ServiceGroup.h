@@ -11,6 +11,14 @@ class ServiceGroup : public EventGroup, public Subject, public Observer
     
 public:
 
+    //Subject
+    void attach(Observer* o) override;
+    void detach(Observer* o) override;
+    void notify(NoticeType notice) override;
+
+    //Observer
+    void update(NoticeType notice) override;
+
     void add(EventComponent* e) override;
     void remove(EventComponent* e) override;
     void open() override;
