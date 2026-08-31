@@ -3,12 +3,26 @@
 
 #include <iostream>
 #include "EventGroup.h"
+#include "Subject.h"
+#include "Observer.h"
 
-class ServiceGroup : public EventGroup
+class ServiceGroup : public EventGroup, public Subject, public Observer
 {
+
+protected:
+    
     
 public:
 
+    //Subject
+    void attach(Observer* o) override;
+    void detach(Observer* o) override;
+    void notify(NoticeType notice) override;
+
+    //Observer
+    void update(NoticeType notice) override;
+
+    //Event Group
     void add(EventComponent* e) override;
     void remove(EventComponent* e) override;
     void open() override;
