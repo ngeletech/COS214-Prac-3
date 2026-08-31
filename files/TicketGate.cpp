@@ -1,4 +1,53 @@
+#include <iostream>
+
 #include "TicketGate.h"
+
+void TicketGate::update(NoticeType notice) {
+
+    switch (notice)
+    {
+    case NoticeType::WeatherAlert:
+        std::cout << "Bad weather incoming, Closing ticket gates down!" << std::endl;
+            close();
+        break;
+    case NoticeType::CapacityAlert:
+        std::cout << "Capacity alert: Park is full" << std::endl;
+        close();
+        break;
+
+    case NoticeType::OpenNotice:
+        std::cout << "Opening ticket gates for visitors." << std::endl;
+        open();
+    break;
+
+    case NoticeType::CloseNotice:
+        std::cout << "Closing ticket gates: Park closed." << std::endl;
+        close();
+    break;
+
+    case NoticeType::PauseNotice:
+        std::cout << "Ticket gates temporarily paused." << std::endl;
+        close();
+        break;
+
+    case NoticeType::ResumeNotice:
+        std::cout << "Ticket gates re-opened." << std::endl;
+        open();
+        break;
+
+    case NoticeType::EvacuationNotice:
+        std::cout << "Evacuation notice received. Visitors leave through ticket gates." << std::endl;
+        open();
+        break;
+
+    case NoticeType::RushHourNotice:
+        std::cout << "Rush hour started. Ticket Gate preparing for more customers." << std::endl;
+        break;
+
+    default:
+        break;
+    }
+}
 
 TicketGate::TicketGate(const std::string& gateName)
     : EventUnit(gateName), isOpen(false), capacity(100), profit(0), ticketsSold(0) {}
@@ -49,7 +98,7 @@ int TicketGate::getCapacity() const
     return capacity;
 }
 
-int TicketGate::moneyMade() {
+int TicketGate::moneyMade() const {
     
     return profit;
 }

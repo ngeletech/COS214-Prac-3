@@ -1,10 +1,10 @@
 #ifndef TICKETGATE_H
 #define TICKETGATE_H
 
-#include <iostream>
 #include "EventUnit.h"
+#include "Observer.h"
 
-class TicketGate : public EventUnit
+class TicketGate : public EventUnit, public Observer
 {
 private:
     bool isOpen;
@@ -13,6 +13,12 @@ private:
     int ticketsSold;
 
 public:
+
+    //--------Observer--------
+    void update(NoticeType notice) override;
+
+
+    //--------Composite---------
     TicketGate(const std::string& gateName);
 
     void open() override;
@@ -21,7 +27,7 @@ public:
     int getCapacity() const override;
 
     void orderTicket();
-    int moneyMade();
+    int moneyMade() const;
 };
 
 #endif

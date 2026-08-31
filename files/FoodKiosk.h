@@ -1,10 +1,10 @@
 #ifndef FOODKIOSK_H
 #define FOODKIOSK_H
 
-#include <iostream>
 #include "EventUnit.h"
+#include "Observer.h"
 
-class FoodKiosk : public EventUnit
+class FoodKiosk : public EventUnit, public Observer
 {
 private:
     bool isOpen;
@@ -13,6 +13,12 @@ private:
     int ordersServed;
 
 public:
+
+    //--------Observer--------
+    void update(NoticeType notice) override;
+
+
+    //--------Composite---------
     FoodKiosk(const std::string& kioskName);
 
     void open() override;
@@ -21,7 +27,7 @@ public:
     int getCapacity() const override;
 
     void orderingCustomer();
-    int moneyMade();
+    int moneyMade() const;
 };
 
 #endif
