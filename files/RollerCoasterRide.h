@@ -7,7 +7,6 @@
 
 class RollerCoaster : public EventUnit {
 private:
-    std::string name;
     int capacity;
     bool isOpen;
     int windSpeed;
