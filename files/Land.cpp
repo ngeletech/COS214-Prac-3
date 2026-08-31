@@ -2,9 +2,25 @@
 #include <iostream>
 #include <algorithm>
 
+/**
+ * @brief Constructs a Land with the given name and outdoor status.
+ * 
+ * @param landName Display name for this land
+ * @param outdoor True if the land is an outdoor area
+ */
 Land::Land(const std::string& landName, bool outdoor) : name(landName), isOutside(outdoor){}
+
+/**
+ * @brief Destructor.
+ * Cleans up all owned childen. Since Land is a composite, it owns all EventComponents in its children vector.
+ */
 Land::~Land(){}
 
+/**
+ * @brief Adds a child component to this land.
+ * 
+ * @param e Pointer to the EventComponent to add. 
+ */
 
 void Land::add(EventComponent* e){
     if (e != nullptr) {
@@ -13,9 +29,18 @@ void Land::add(EventComponent* e){
     
 }
 
+/**
+ * @brief Removes a child component from this land.
+ * 
+ * @param e Pointer to the EventComponent to remove.
+ */
 void Land::remove(EventComponent* e){
     children.erase(std::remove(children.begin(), children.end(), e), children.end());
 }
+
+/**
+ * @brief Opens this land and all its children recursively
+ */
 void Land::open(){
     for (EventComponent* child : children){
         child->open();
@@ -23,6 +48,9 @@ void Land::open(){
     
 }
 
+/**
+ * @brief Closes this land and all its children recursively.
+ */
 void Land::close(){
     for (EventComponent* child : children){
         child->close();
@@ -30,7 +58,9 @@ void Land::close(){
     
 }
 
-
+/**
+ * @brief Reports the status of this land and all its children.
+ */
 void Land::reportStatus() const {
     std::cout<< name<<" (" <<(isOutside ? "Outdoor" : "Indoor")<<"): ";
     for (EventComponent* child: children){
@@ -39,6 +69,11 @@ void Land::reportStatus() const {
     
 }
 
+/**
+ * @brief Gets the aggregate capacity of this land and all childre. 
+ * 
+ * @return int Total capacity of all components in this land.
+ */
 
 int Land::getCapacity() const{
     int total = 0;
@@ -48,10 +83,24 @@ int Land::getCapacity() const{
     return total;
     
 }
+
+/**
+ * @brief Gets the aggregate capacity of this land and all childre. 
+ * 
+ * @return int Total capacity of all components in this land.
+ */
 std::string Land::getName() const{
     return name;
 }
 
+
+/**
+ * @brief Checks if this land is an outdoor area.
+ * 
+ * Used for weather-related decisions and notifications.
+ * 
+ * @return bool True if the land is outdoors, false if otherwise.
+ */
 bool Land::outDoorEvent() const {
     return isOutside;
 }
