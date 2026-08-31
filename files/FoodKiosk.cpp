@@ -2,6 +2,7 @@
 
 #include "FoodKiosk.h"
 
+//--------Observer--------
 void FoodKiosk::update(NoticeType notice) {
 
     switch (notice)
@@ -48,6 +49,7 @@ void FoodKiosk::update(NoticeType notice) {
     }
 }
 
+//--------Composite---------
 
 FoodKiosk::FoodKiosk(const std::string& kioskName)
     : EventUnit(kioskName), isOpen(false), capacity(50), profit(0), ordersServed(0) {}

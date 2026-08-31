@@ -2,6 +2,8 @@
 
 #include "TicketGate.h"
 
+//--------Observer--------
+
 void TicketGate::update(NoticeType notice) {
 
     switch (notice)
@@ -48,6 +50,9 @@ void TicketGate::update(NoticeType notice) {
         break;
     }
 }
+
+
+//--------Composite---------
 
 TicketGate::TicketGate(const std::string& gateName)
     : EventUnit(gateName), isOpen(false), capacity(100), profit(0), ticketsSold(0) {}
