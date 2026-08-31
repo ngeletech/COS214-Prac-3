@@ -1,5 +1,43 @@
 #include "ServiceGroup.h"
 
+//Subject
+void ServiceGroup::attach(Observer* o) {
+    observers.push_back(o);
+
+}
+
+void ServiceGroup::detach(Observer* o) {
+    if (observers.empty()) {
+        std::cout << "ServiceGroup is empty" << std::endl;
+        return;
+    }
+
+    // goes through each position in observers to find and remove e
+    for (auto it = observers.begin(); it != observers.end(); ++it) {
+        if (*it == o) {
+            observers.erase(it);
+            return;
+        }
+    }
+
+}
+
+void ServiceGroup::notify(NoticeType notice) {
+    for (Observer* observer : observers) {
+        observer->update(notice);
+    }
+}
+
+
+//Observer
+void ServiceGroup::update(NoticeType notice) {
+    
+    notify(notice);
+
+}
+
+
+
 void ServiceGroup::add(EventComponent* e) {
     children.push_back(e);
 

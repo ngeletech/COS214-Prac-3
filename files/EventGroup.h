@@ -5,7 +5,10 @@
 #include "EventComponent.h"
 
 class EventGroup : public EventComponent
+// public Subject,
+// public Observer
 {
+
 protected:
     std::vector<EventComponent*> children;
     
