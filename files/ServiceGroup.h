@@ -3,8 +3,10 @@
 
 #include <iostream>
 #include "EventGroup.h"
+#include "Subject.h"
+#include"Observer.h"
 
-class ServiceGroup : public EventGroup
+class ServiceGroup : public EventGroup, public Subject, public Observer
 {
     
 public:

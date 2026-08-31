@@ -48,7 +48,7 @@ int TicketGate::getCapacity() const
 }
 
 int TicketGate::moneyMade() {
-    
+    return profit;
 
 }
 
@@ -101,4 +101,9 @@ void FoodKiosk::orderingCustomer()
 int FoodKiosk::getCapacity() const
 {
     return capacity;
+}
+
+int FoodKiosk::moneyMade() {
+    return profit;
+
 }
