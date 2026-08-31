@@ -16,8 +16,8 @@ public:
     virtual void remove(EventComponent* e) = 0;
     virtual void open() = 0;
     virtual void close() = 0;
-    virtual void reportStatus() = 0;
-    virtual int getCapacity() = 0;
+    virtual void reportStatus() const = 0;
+    virtual int getCapacity() const = 0;
 
     ~EventGroup()  override;
 };

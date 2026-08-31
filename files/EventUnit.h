@@ -17,8 +17,8 @@ class WaterRide : public EventUnit
 public:
     void open() override;
     void close() override;
-    void reportStatus() override;
-    int getCapacity() override;
+    void reportStatus() const override;
+    int getCapacity() const override;
 
 };
 
@@ -36,8 +36,8 @@ public:
 
     void open() override;
     void close() override;
-    void reportStatus() override;
-    int getCapacity() override;
+    void reportStatus() const override;
+    int getCapacity() const override;
 
     std::string getName() const;
     int getStaffOnDuty() const;
@@ -47,21 +47,36 @@ public:
 
 class TicketGate : public EventUnit 
 {
+private:
+    bool isOpen;
+    int capacity;
+    int profit;
+
 public:
+    TicketGate();
     void open() override;
     void close() override;
-    void reportStatus() override;
-    int getCapacity() override;
+    void reportStatus() const override;
+    int getCapacity() const override;
+    void orderTicket();
+    int moneyMade();
 
 };
 
 class FoodKiosk : public EventUnit 
 {
+private:
+    bool isOpen;
+    int capacity;
+    int profit;
 public:
+    FoodKiosk();
     void open() override;
     void close() override;
-    void reportStatus() override;
-    int getCapacity() override;
+    void reportStatus() const override;
+    int getCapacity() const override;
+    void orderingCustomer();
+    int moneyMade();
 
 };
 
@@ -70,8 +85,8 @@ class KidsRide : public EventUnit
 public:
     void open() override;
     void close() override;
-    void reportStatus() override;
-    int getCapacity() override;
+    void reportStatus() const override;
+    int getCapacity() const override;
 
 };
 

@@ -1,6 +1,7 @@
 #ifndef SERVICEGROUP_H
 #define SERVICEGROUP_H
 
+#include <iostream>
 #include "EventGroup.h"
 
 class ServiceGroup : public EventGroup
@@ -12,8 +13,8 @@ public:
     void remove(EventComponent* e) override;
     void open() override;
     void close() override;
-    void reportStatus() override;
-    int getCapacity() override;
+    void reportStatus() const override;
+    int getCapacity() const override;
 
     ~ServiceGroup()  override;
 };
