@@ -26,8 +26,8 @@ using namespace std;
         void remove(EventComponent* e) override;
         void open() override;
         void close() override;
-        void reportStatus() override;
-        int getCapacity() override;
+        void reportStatus() const override;
+        int getCapacity() const override;
 
 
         std::string getName() const;
