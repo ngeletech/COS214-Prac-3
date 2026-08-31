@@ -10,9 +10,9 @@ protected:
     std::vector<Observer*> observers;
 public:
 
-    virtual void attach(Observer* o) = 0;
-    virtual void detach(Observer* o) = 0;
-    virtual void notify(NoticeType notice) = 0;
+    virtual void attach(Observer* o);
+    virtual void detach(Observer* o);
+    virtual void notify(NoticeType notice);
     virtual ~Subject() = default;
 };
 
