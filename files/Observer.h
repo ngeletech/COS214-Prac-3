@@ -1,13 +1,24 @@
 #ifndef OBSERVER_H
 #define OBSERVER_H
 
+enum class NoticeType {
+
+    WeatherAlert,
+    CapacityAlert,
+    OpenNotice,
+    CloseNotice,
+    PauseNotice,
+    ResumeNotice
+
+};
+
 class Observer
 {
 
 public:
-    virtual void update() = 0;
+    virtual void update(NoticeType notice) = 0;
     virtual ~Observer() = default;
 };
 
 
-#endif OBSERVER_H
+#endif //OBSERVER_H
