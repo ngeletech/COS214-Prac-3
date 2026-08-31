@@ -2,6 +2,7 @@
 #define EVENTUNIT_H
 
 #include "EventComponent.h"
+#include <iostream>
 
 class EventUnit : public EventComponent
 {
@@ -23,11 +24,24 @@ public:
 
 class FirstAidStation : public EventUnit 
 {
+
+private:
+    std::string name;
+    int staffOnDuty;
+    bool isOperational;
 public:
+    FirstAidStation(const std::string& stationName, int staff);
+    ~FirstAidStation() override;
+
+
     void open() override;
     void close() override;
     void reportStatus() override;
     int getCapacity() override;
+
+    std::string getName() const;
+    int getStaffOnDuty() const;
+    bool getIsOperational() const;
 
 };
 
