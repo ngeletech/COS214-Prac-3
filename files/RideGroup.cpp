@@ -48,7 +48,7 @@ void RideGroup::add(EventComponent* e)
 
 void RideGroup::remove(EventComponent* e)
 {
-    for (int i = 0; i < children.size(); i++)
+    for (std::size_t i = 0; i < children.size(); i++)
     {
         if (children[i] == e)
         {

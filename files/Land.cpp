@@ -2,8 +2,8 @@
 #include <iostream>
 #include <algorithm>
 
-Land::Land(const std::string& landName, bool outdoor) : name(landName), isOutside(outdoor){}
-Land::~Land(){}
+Land::Land(const std::string& landName, bool outdoor)
+    : isOutside(outdoor), name(landName) {}
 
 
 void Land::add(EventComponent* e){
