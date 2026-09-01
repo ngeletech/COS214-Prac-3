@@ -103,6 +103,15 @@ public:
     ~RideGroup()  override;
 };
 
+/**
+ * @brief Transfers a unit from one ride group to another, updating
+ * both Composite ownership and Observer registration together.
+ *
+ * @param unit The component being transferred. Must implement Observer.
+ * @param from Current owning group.
+ * @param to Destination group.
+ */
+void transferUnit(EventComponent* unit, RideGroup& from, RideGroup& to);
 
 
 #endif 

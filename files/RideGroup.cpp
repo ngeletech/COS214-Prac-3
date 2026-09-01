@@ -108,3 +108,19 @@ RideGroup::~RideGroup()
     }
     children.clear();
 }
+
+//4.2 Transfer
+void transferUnit(EventComponent* unit, RideGroup& from, RideGroup& to)
+{
+    from.remove(unit);
+    to.add(unit);
+
+    Observer* obs = dynamic_cast<Observer*>(unit);
+    if (obs != nullptr)
+    {
+        from.detach(obs);
+        to.attach(obs);
+    }
+
+    std::cout << "Unit transferred between ride groups." << std::endl;
+}
