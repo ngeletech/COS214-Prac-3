@@ -1,0 +1,17 @@
+<map id="files/RideGroup.h" name="files/RideGroup.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="159,5,292,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,85,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,33,88,76,86,71,195,28"/>
+<area shape="rect" id="Node000003" href="$EventGroup_8h.html" title=" " alt="" coords="110,79,221,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,33,186,70,182,66,213,29"/>
+<area shape="rect" id="Node000006" href="$Subject_8h.html" title=" " alt="" coords="245,79,328,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="237,29,270,66,266,70,233,33"/>
+<area shape="rect" id="Node000007" href="$Observer_8h.html" title=" " alt="" coords="319,152,411,177"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="266,28,306,47,325,61,342,77,358,107,366,137,360,139,353,109,338,80,322,65,303,52,263,33"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="233,152,295,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="183,102,238,142,235,146,180,106"/>
+<area shape="rect" id="Node000005" href="$EventComponent_8h.html" title=" " alt="" coords="61,152,208,177"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="163,105,147,141,143,139,158,103"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="285,105,274,140,269,138,280,104"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="301,102,344,141,341,145,298,106"/>
+</map>

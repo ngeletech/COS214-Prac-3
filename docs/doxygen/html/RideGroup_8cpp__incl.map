@@ -1,0 +1,19 @@
+<map id="files/RideGroup.cpp" name="files/RideGroup.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="151,5,299,31"/>
+<area shape="rect" id="Node000002" href="$RideGroup_8h.html" title=" " alt="" coords="174,79,277,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,31,228,65,223,65,223,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,85,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="197,107,88,149,86,144,195,102"/>
+<area shape="rect" id="Node000004" href="$EventGroup_8h.html" title=" " alt="" coords="110,152,221,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="217,106,186,143,182,140,213,103"/>
+<area shape="rect" id="Node000007" href="$Subject_8h.html" title=" " alt="" coords="245,152,328,177"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="237,103,270,140,266,143,233,106"/>
+<area shape="rect" id="Node000008" href="$Observer_8h.html" title=" " alt="" coords="319,225,411,251"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="266,102,306,120,325,134,342,150,358,180,366,211,360,212,353,182,338,154,322,138,303,125,263,106"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="233,225,295,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="183,175,238,215,235,219,180,180"/>
+<area shape="rect" id="Node000006" href="$EventComponent_8h.html" title=" " alt="" coords="61,225,208,251"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="163,179,147,214,143,212,158,177"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="285,178,274,213,269,211,280,177"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="301,175,344,214,341,218,298,179"/>
+</map>

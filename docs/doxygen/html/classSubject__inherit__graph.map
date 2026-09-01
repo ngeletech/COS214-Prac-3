@@ -1,0 +1,11 @@
+<map id="Subject" name="Subject">
+<area shape="rect" id="Node000001" title="Abstract subject class for the Observer pattern." alt="" coords="175,5,246,31"/>
+<area shape="rect" id="Node000002" href="$classEventControl.html" title=" " alt="" coords="5,79,112,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,39,85,81,82,76,173,34"/>
+<area shape="rect" id="Node000003" href="$classLand.html" title="Defines the Land class as a Concrete Composite." alt="" coords="136,79,189,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,44,173,80,168,77,193,41"/>
+<area shape="rect" id="Node000004" href="$classRideGroup.html" title="Represents a group of ride related event units in the theme park." alt="" coords="213,79,304,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="228,41,253,77,249,80,224,44"/>
+<area shape="rect" id="Node000005" href="$classServiceGroup.html" title="Represents a group of service related event units in the theme park." alt="" coords="328,79,437,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="252,33,356,76,354,81,250,38"/>
+</map>

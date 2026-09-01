@@ -1,0 +1,19 @@
+<map id="files/ServiceGroup.cpp" name="files/ServiceGroup.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="85,5,251,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="65,79,145,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,33,127,70,123,66,156,29"/>
+<area shape="rect" id="Node000003" href="$ServiceGroup_8h.html" title=" " alt="" coords="170,79,291,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,29,213,66,209,70,176,33"/>
+<area shape="rect" id="Node000004" href="$EventGroup_8h.html" title=" " alt="" coords="54,152,165,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="213,106,142,147,139,143,210,102"/>
+<area shape="rect" id="Node000007" href="$Subject_8h.html" title=" " alt="" coords="189,152,272,177"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="233,104,233,138,228,138,228,104"/>
+<area shape="rect" id="Node000008" href="$Observer_8h.html" title=" " alt="" coords="263,225,355,251"/>
+<area shape="poly" id="edge9_Node000003_Node000008" title=" " alt="" coords="246,102,267,123,286,151,299,181,307,211,302,212,294,183,282,153,262,127,242,106"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="177,225,239,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="127,175,182,215,179,219,124,180"/>
+<area shape="rect" id="Node000006" href="$EventComponent_8h.html" title=" " alt="" coords="5,225,152,251"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="107,179,91,214,87,212,102,177"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="229,178,218,213,213,211,224,177"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="245,175,288,214,285,218,242,179"/>
+</map>

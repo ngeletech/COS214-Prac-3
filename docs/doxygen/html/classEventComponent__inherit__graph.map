@@ -1,0 +1,25 @@
+<map id="EventComponent" name="EventComponent">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,179,140,204"/>
+<area shape="rect" id="Node000002" href="$classEventGroup.html" title=" " alt="" coords="188,80,287,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,169,213,103,216,108,108,174"/>
+<area shape="rect" id="Node000006" href="$classEventUnit.html" title=" " alt="" coords="194,252,281,277"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="116,207,209,249,206,254,113,212"/>
+<area shape="rect" id="Node000003" href="$classLand.html" title="Defines the Land class as a Concrete Composite." alt="" coords="377,5,431,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="271,71,334,40,376,24,378,29,336,44,274,76"/>
+<area shape="rect" id="Node000004" href="$classRideGroup.html" title="Represents a group of ride related event units in the theme park." alt="" coords="359,55,449,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="300,80,358,72,359,77,301,86"/>
+<area shape="rect" id="Node000005" href="$classServiceGroup.html" title="Represents a group of service related event units in the theme park." alt="" coords="349,104,459,129"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="301,99,349,106,349,111,300,104"/>
+<area shape="rect" id="Node000007" href="$classFirstAidStation.html" title="Concrete Leaf representing a medical service point." alt="" coords="345,153,463,179"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="261,240,294,213,333,188,359,176,361,181,336,192,297,218,265,244"/>
+<area shape="rect" id="Node000008" href="$classFoodKiosk.html" title="Represents food kiosk operating in park." alt="" coords="359,203,449,228"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="293,245,359,226,361,231,295,251"/>
+<area shape="rect" id="Node000009" href="$classKidsRide.html" title="Represents a low&#45;intensity ride for children that pasues on capacity alerts to manage queues." alt="" coords="365,252,443,277"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="295,262,365,262,365,267,295,267"/>
+<area shape="rect" id="Node000010" href="$classRollerCoasterRide.html" title="Represents a ride related that pauses under high wind." alt="" coords="335,301,473,327"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="295,279,361,299,359,304,293,284"/>
+<area shape="rect" id="Node000011" href="$classTicketGate.html" title="Represents a ticket gate used to admit visitors into the theme park." alt="" coords="358,351,450,376"/>
+<area shape="poly" id="edge10_Node000006_Node000011" title=" " alt="" coords="265,285,298,311,336,336,364,348,361,353,333,340,295,315,261,289"/>
+<area shape="rect" id="Node000012" href="$classWaterRide.html" title="Represents a water&#45;based ride related that closes entirely during weather reports." alt="" coords="359,400,449,425"/>
+<area shape="poly" id="edge11_Node000006_Node000012" title=" " alt="" coords="255,288,288,337,311,363,336,385,360,398,358,403,333,390,307,367,284,340,250,291"/>
+</map>
