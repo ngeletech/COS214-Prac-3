@@ -31,7 +31,7 @@ void Land::close(){
 }
 
 
-void Land::reportStatus() {
+void Land::reportStatus() const {
     std::cout<< name<<" (" <<(isOutside ? "Outdoor" : "Indoor")<<"): ";
     for (EventComponent* child: children){
         child->reportStatus();
@@ -40,7 +40,7 @@ void Land::reportStatus() {
 }
 
 
-int Land::getCapacity(){
+int Land::getCapacity() const{
     int total = 0;
     for ( EventComponent* child: children) {
         total += child->getCapacity();

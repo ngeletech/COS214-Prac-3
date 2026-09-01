@@ -40,6 +40,8 @@ void TicketGate::update(NoticeType notice) {
     case NoticeType::EvacuationNotice:
         std::cout << "Evacuation notice received. Visitors leave through ticket gates." << std::endl;
         open();
+        capacity = 0;
+        std::cout << "Sucessful evacuation park empty." << std::endl;
         break;
 
     case NoticeType::RushHourNotice:
