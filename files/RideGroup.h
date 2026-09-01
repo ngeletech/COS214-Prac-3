@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "EventGroup.h"
+
 #include "Subject.h"
 #include "Observer.h"
 
@@ -112,6 +113,24 @@ public:
  * @param to Destination group.
  */
 void transferUnit(EventComponent* unit, RideGroup& from, RideGroup& to);
+
+
+class RideGroup : public EventGroup {
+private:
+    std::string name;
+public:
+    RideGroup(const std::string& groupName);
+    void add(EventComponent* e) override;
+    void remove(EventComponent* e) override;
+    void open() override;
+    void close() override;
+    void reportStatus() const;
+    int getCapacity() const;
+
+    ~RideGroup()  override;
+};
+
+
 
 
 #endif 
