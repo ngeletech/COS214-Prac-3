@@ -5,6 +5,44 @@
 Land::Land(const std::string& landName, bool outdoor)
     : isOutside(outdoor), name(landName) {}
 
+    void Land::attach(Observer* o)
+{
+    if (o == nullptr)
+        return;
+
+    for (Observer* observer : observers)
+    {
+        if (observer == o)
+            return;
+    }
+
+    observers.push_back(o);
+}
+
+void Land::detach(Observer* o)
+{
+    for (auto it = observers.begin(); it != observers.end(); ++it)
+    {
+        if (*it == o)
+        {
+            observers.erase(it);
+            return;
+        }
+    }
+}
+
+void Land::notify(NoticeType notice)
+{
+    for (Observer* observer : observers)
+    {
+        observer->update(notice);
+    }
+}
+
+void Land::update(NoticeType notice)
+{
+    notify(notice);
+}
 
 void Land::add(EventComponent* e){
     if (e != nullptr) {
@@ -54,4 +92,8 @@ std::string Land::getName() const{
 
 bool Land::outDoorEvent() const {
     return isOutside;
+}
+
+Land::~Land()
+{
 }
