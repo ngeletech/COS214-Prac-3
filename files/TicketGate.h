@@ -7,6 +7,10 @@
 /**
  * @class TicketGate
  * @brief Represents a ticket gate used to admit visitors into the theme park.
+ * 
+ *  TicketGate is a concrete EventUnit and Observer. It reacts to event
+ * notices by opening or closing when appropriate and keeps track of
+ * tickets sold and profit earned.
  */
 
 class TicketGate : public EventUnit, public Observer
