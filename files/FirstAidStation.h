@@ -11,7 +11,7 @@
  * 
  * Designed to stay open and operational during most event-wide elerts rather than closing.
  */
-class FirstAidStation : public EventUnit
+class FirstAidStation : public EventUnit, public Observer
 {
 private:
     int staffOnDuty; //number of staff on duty;
@@ -19,6 +19,12 @@ private:
 
 public:
 
+    /**
+     * @brief Responds to notice recieved from a subject.
+     * @param notice The Noticetype describing the event occured
+     */
+
+     void update(NoticeType notice) override;
     /**
      * @brief Constructs a FirstAidStation
      * @param stationName Display name for this station

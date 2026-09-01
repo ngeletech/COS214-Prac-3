@@ -12,7 +12,7 @@ using namespace std;
  * This file contains the land class which represents a themed area within the event.
  */
 
- class Land : public EventGroup{
+ class Land : public EventGroup, public Observer{
     private:
         /**
          * @param landName Display name for this land
@@ -21,6 +21,33 @@ using namespace std;
         bool isOutside;
         std::string name;
     public:
+
+        /**
+         * @brief Attaches an observer to the service group.
+         * @param o Pointer to the observer that should receive notifications.
+         */
+        void attach(Observer* o) override;    
+
+        /**
+         * @brief Detaches an observer from the service group.
+         * @param o Pointer to the observer that should be removed.
+         */
+        void detach(Observer* o) override;
+
+        /**
+         * @brief Notifies all registered observers of a notice.
+         * @param notice The type of notice that should be sent to the observers.
+         */
+        void notify(NoticeType notice) override;
+
+        // --------Observer---------
+
+        /**
+         * @brief Receives a notice from a subject and responds to the notice.
+         * @param notice The type of notice received.
+         */  
+        void update(NoticeType notice) override;
+
         /**
          * @brief Constructor- Constructs a Land with the given name and outdoor status.
          * @param landName Display name for this land

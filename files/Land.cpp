@@ -2,6 +2,43 @@
 #include <iostream>
 #include <algorithm>
 
+void ServiceGroup::attach(Observer* o) {
+    observers.push_back(o);
+
+}
+
+void ServiceGroup::detach(Observer* o) {
+    if (observers.empty()) {
+        std::cout << "Land is empty" << std::endl;
+        return;
+    }
+
+    // goes through each position in observers to find and remove e
+    for (auto it = observers.begin(); it != observers.end(); ++it) {
+        if (*it == o) {
+            observers.erase(it);
+            return;
+        }
+    }
+
+}
+
+void ServiceGroup::notify(NoticeType notice) {
+    for (Observer* observer : observers) {
+        observer->update(notice);
+    }
+}
+
+
+//Observer
+void ServiceGroup::update(NoticeType notice) {
+    
+    notify(notice);
+
+}
+
+
+
 /**
  * @brief Constructs a Land with the given name and outdoor status.
  * 
@@ -14,7 +51,11 @@ Land::Land(const std::string& landName, bool outdoor) : name(landName), isOutsid
  * @brief Destructor.
  * Cleans up all owned childen. Since Land is a composite, it owns all EventComponents in its children vector.
  */
-Land::~Land(){}
+Land::~Land(){
+    for (EventComponent* child : children) {
+        delete child;
+    }
+}
 
 /**
  * @brief Adds a child component to this land.
