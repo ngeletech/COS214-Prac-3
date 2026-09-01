@@ -9,8 +9,12 @@ void KidsRide::update(NoticeType notice) {
         std::cout << getName() << ": mild weather, remain open." << std::endl;
         break;
     case NoticeType::CapacityAlert:
-        std::cout << getName() << ":Capacity alert acknowlegded, pasuing to control queues." << std::endl;
-        close();
+        if (currentRiders >= capacity) {
+            std::cout << getName() << " kids ride at capacity, pausing boarding." << std::endl;
+            close();
+        } else {
+            std::cout << getName() << " kids ride has room, remaining open. (" << currentRiders << "/" << capacity << ")" << std::endl;
+        }
         break;
 
     case NoticeType::OpenNotice:
@@ -49,7 +53,7 @@ void KidsRide::update(NoticeType notice) {
 
 //--------Composite---------
 KidsRide::KidsRide(const std::string& rideName, int rideCapacity) 
-    : EventUnit(rideName), capacity(rideCapacity), isOpen(false){}
+    : EventUnit(rideName), capacity(rideCapacity), isOpen(false), currentRiders(0) {}
 
 void KidsRide::open() {
 
@@ -71,4 +75,25 @@ void KidsRide::reportStatus() const {
     
 int KidsRide::getCapacity() const {
     return capacity;
+}
+
+void KidsRide::boardGuests(int count)
+{
+    if (!isOpen)
+    {
+        std::cout << "Cannot board, ride is closed." << std::endl;
+        return;
+    }
+    if (currentRiders + count > capacity)
+    {
+        std::cout << "Cannot board, would exceed capacity." << std::endl;
+        return;
+    }
+    currentRiders += count;
+    std::cout << count << " guest(s) boarded " << getName() << "." << std::endl;
+}
+
+int KidsRide::getCurrentRiders() const
+{
+    return currentRiders;
 }

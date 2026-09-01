@@ -18,6 +18,7 @@ class KidsRide : public EventUnit, public Observer{
 private:
     int capacity;
     bool isOpen;
+    int currentRiders;
 
 public:
     //--------Observer--------
@@ -58,6 +59,18 @@ public:
      * @return Guest capacity.
      */
     int getCapacity() const override;
+
+     /**
+     * @brief Boards a number of guests onto the ride, up to capacity.
+     * @param count Number of guests attempting to board.
+     */
+    void boardGuests(int count);
+
+    /**
+     * @brief Returns the current number of riders on this ride.
+     * @return Current rider count.
+     */
+    int getCurrentRiders() const;
 };
 
 #endif

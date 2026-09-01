@@ -10,7 +10,12 @@ void RollerCoasterRide::update(NoticeType notice) {
             close();
         break;
     case NoticeType::CapacityAlert:
-        std::cout << getName() << ":Capacity alert acknowlegded." << std::endl;
+        if (currentRiders >= capacity) {
+            std::cout << getName() << " rollercoaster at capacity, pausing boarding." << std::endl;
+            close();
+        } else {
+            std::cout << getName() << " rollercoaster has room, remaining open. (" << currentRiders << "/" << capacity << ")" << std::endl;
+        }
         break;
 
     case NoticeType::OpenNotice:
@@ -51,7 +56,7 @@ void RollerCoasterRide::update(NoticeType notice) {
 
 //--------Composite---------
 RollerCoasterRide::RollerCoasterRide(const std::string& rideName, int rideCapacity) 
-    : EventUnit(rideName), capacity(rideCapacity), isOpen(false), windSpeed(0) {}
+    : EventUnit(rideName), capacity(rideCapacity), isOpen(false), windSpeed(0), currentRiders(0) {}
 
 void RollerCoasterRide::open() {
 
@@ -72,7 +77,8 @@ void RollerCoasterRide::close() {
 void RollerCoasterRide::reportStatus() const {
 
     std::cout << getName() <<" status: " << (isOpen ? "open" : "closed")
-    << ", capacity: " << capacity << std::endl;
+    << ", capacity: " << capacity 
+    << ", current riders: " << currentRiders << std::endl;
 }
     
 int RollerCoasterRide::getCapacity() const {
@@ -86,4 +92,25 @@ void RollerCoasterRide::setWindSpeed(int speed) {
         std::cout << " Ride " << getName() << " is pausing due to high winds." << std::endl;
         isOpen = false;
     }
+}
+
+void RollerCoasterRide::boardGuests(int count)
+{
+    if (!isOpen)
+    {
+        std::cout << "Cannot board, ride is closed." << std::endl;
+        return;
+    }
+    if (currentRiders + count > capacity)
+    {
+        std::cout << "Cannot board, would exceed capacity." << std::endl;
+        return;
+    }
+    currentRiders += count;
+    std::cout << count << " guest(s) boarded " << getName() << "." << std::endl;
+}
+
+int RollerCoasterRide::getCurrentRiders() const
+{
+    return currentRiders;
 }

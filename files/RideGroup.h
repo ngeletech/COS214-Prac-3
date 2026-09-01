@@ -82,14 +82,14 @@ public:
      * @brief Reports this group's total guest capacity, then
      * recurses into each child's status report.
      */
-    void reportStatus() const;
+    void reportStatus() const override;
 
     /**
      * @brief Returns this group's total guest capacity, summed
      * recursively over all children.
      * @return Total guest capacity across all children.
      */
-    int getCapacity() const;
+    int getCapacity() const override;
 
     /**
      * @brief Returns this group's display name.

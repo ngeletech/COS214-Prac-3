@@ -13,7 +13,7 @@ void TicketGate::update(NoticeType notice) {
             close();
         break;
     case NoticeType::CapacityAlert:
-        std::cout << "Capacity alert: Park is full" << std::endl;
+        std::cout << "Capacity alert: Park is full. Tickets sold so far: " << ticketsSold <<std::endl;
         close();
         break;
 

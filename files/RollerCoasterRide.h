@@ -19,10 +19,11 @@ private:
     int capacity;
     bool isOpen;
     int windSpeed;
+    int currentRiders;
 
 public:
     //--------Observer--------
-    
+
     /**
      * @brief Responds to a notice received from a Subject.
      * @param notice The NoticeType describing the event that occurred.
@@ -66,6 +67,18 @@ public:
      * @param speed Current wind speed.
      */
     void setWindSpeed(int speed);
+
+     /**
+     * @brief Boards a number of guests onto the ride, up to capacity.
+     * @param count Number of guests attempting to board.
+     */
+    void boardGuests(int count);
+
+    /**
+     * @brief Returns the current number of riders on this ride.
+     * @return Current rider count.
+     */
+    int getCurrentRiders() const;
 };
 
 #endif

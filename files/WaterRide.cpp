@@ -10,7 +10,12 @@ void WaterRide::update(NoticeType notice) {
         close();
         break;
     case NoticeType::CapacityAlert:
-        std::cout << getName() << ":Capacity alert acknowlegded." << std::endl;
+        if (currentRiders >= capacity) {
+            std::cout << getName() << " water ride at capacity, pausing boarding." << std::endl;
+            close();
+        } else {
+            std::cout << getName() << " water ride has room, remaining open. (" << currentRiders << "/" << capacity << ")" << std::endl;
+        }
         break;
 
     case NoticeType::OpenNotice:
@@ -49,7 +54,7 @@ void WaterRide::update(NoticeType notice) {
 
 //--------Composite---------
 WaterRide::WaterRide(const std::string& rideName, int rideCapacity) 
-    : EventUnit(rideName), capacity(rideCapacity), isOpen(false){}
+    : EventUnit(rideName), capacity(rideCapacity), isOpen(false), currentRiders(0){}
 
 void WaterRide::open() {
 
@@ -71,4 +76,25 @@ void WaterRide::reportStatus() const {
     
 int WaterRide::getCapacity() const {
     return capacity;
+}
+
+void WaterRide::boardGuests(int count)
+{
+    if (!isOpen)
+    {
+        std::cout << "Cannot board, ride is closed." << std::endl;
+        return;
+    }
+    if (currentRiders + count > capacity)
+    {
+        std::cout << "Cannot board, would exceed capacity." << std::endl;
+        return;
+    }
+    currentRiders += count;
+    std::cout << count << " guest(s) boarded " << getName() << "." << std::endl;
+}
+
+int WaterRide::getCurrentRiders() const
+{
+    return currentRiders;
 }

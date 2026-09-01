@@ -12,7 +12,7 @@ void FoodKiosk::update(NoticeType notice) {
             close();
         break;
     case NoticeType::CapacityAlert:
-        std::cout << "Capacity alert: limiting new customers." << std::endl;
+        std::cout << "Capacity alert: limiting new customers. Orders served so far: " << ordersServed << std::endl;
         break;
 
     case NoticeType::OpenNotice:
