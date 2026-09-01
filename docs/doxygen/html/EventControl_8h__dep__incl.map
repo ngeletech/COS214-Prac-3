@@ -1,5 +1,7 @@
 <map id="files/EventControl.h" name="files/EventControl.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,155,31"/>
-<area shape="rect" id="Node000002" href="$files_2main_8cpp.html" title=" " alt="" coords="23,79,137,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,44,83,79,77,79,77,44"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="94,5,243,31"/>
+<area shape="rect" id="Node000002" href="$EventControl_8cpp.html" title=" " alt="" coords="5,79,169,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,42,102,80,99,76,144,38"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html" title=" " alt="" coords="193,79,307,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,38,238,76,235,80,190,42"/>
 </map>
