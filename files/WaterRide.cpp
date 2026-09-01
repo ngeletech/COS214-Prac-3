@@ -98,3 +98,21 @@ int WaterRide::getCurrentRiders() const
 {
     return currentRiders;
 }
+
+void WaterRide::setMaintenanceMode(bool active)
+{
+    underMaintenance = active;
+    if (active && isOpen) close();
+    std::cout << getName() << (active ? " entering maintenance." : " maintenance complete.") << std::endl;
+}
+
+void WaterRide::recordRide(int guestCount)
+{
+    timesRidden += guestCount;
+    std::cout << getName() << " has now carried " << timesRidden << " guest(s) total." << std::endl;
+}
+
+int WaterRide::getPopularity() const
+{
+    return timesRidden;
+}

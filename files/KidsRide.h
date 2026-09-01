@@ -19,6 +19,8 @@ private:
     int capacity;
     bool isOpen;
     int currentRiders;
+    bool underMaintenance;
+    int timesRidden;
 
 public:
     //--------Observer--------
@@ -71,6 +73,29 @@ public:
      * @return Current rider count.
      */
     int getCurrentRiders() const;
+
+    /**
+     * @brief Puts the ride into or out of maintenance mode.
+     *
+     * A ride under maintenance cannot be opened via open() or via an
+     * OpenNotice, regardless of other conditions, until maintenance
+     * mode is deactivated.
+     * @param active True means begin maintenance, false means maintenance completed.
+     */
+    void setMaintenanceMode(bool active);
+
+    /**
+     * @brief Records that a group of guests has completed a ride cycle,
+     * incrementing this ride's popularity total.
+     * @param guestCount Number of guests who completed the ride.
+     */
+    void recordRide(int guestCount);
+
+    /**
+     * @brief Returns the total number of guests this ride has served.
+     * @return Guest count across all completed cycles.
+     */
+    int getPopularity() const;
 };
 
 #endif

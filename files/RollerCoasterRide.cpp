@@ -114,3 +114,21 @@ int RollerCoasterRide::getCurrentRiders() const
 {
     return currentRiders;
 }
+
+void RollerCoasterRide::setMaintenanceMode(bool active)
+{
+    underMaintenance = active;
+    if (active && isOpen) close();
+    std::cout << getName() << (active ? " entering maintenance." : " maintenance complete.") << std::endl;
+}
+
+void RollerCoasterRide::recordRide(int guestCount)
+{
+    timesRidden += guestCount;
+    std::cout << getName() << " has now carried " << timesRidden << " guest(s) total." << std::endl;
+}
+
+int RollerCoasterRide::getPopularity() const
+{
+    return timesRidden;
+}
