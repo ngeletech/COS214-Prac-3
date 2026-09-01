@@ -4,15 +4,25 @@
 #include <iostream>
 #include <string>
 #include "EventUnit.h"
+#include "Observer.h"
 
-class RollerCoaster : public EventUnit {
+class RollerCoasterRide : public EventUnit , public Observer {
 private:
     int capacity;
     bool isOpen;
     int windSpeed;
 
 public:
-    RollerCoaster(const std::string& rideName, int rideCapacity);
+    //--------Observer--------
+    /**
+     * @brief Responds to a notice received from a Subject.
+     * @param notice The NoticeType describing the event that occurred.
+     */
+    void update(NoticeType notice) override;
+
+
+    //--------Composite---------    
+    RollerCoasterRide(const std::string& rideName, int rideCapacity);
 
     void open() override;
     void close() override;
