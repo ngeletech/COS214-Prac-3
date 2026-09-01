@@ -2,12 +2,12 @@
 #include <iostream>
 #include <algorithm>
 
-void ServiceGroup::attach(Observer* o) {
+void Land::attach(Observer* o) {
     observers.push_back(o);
 
 }
 
-void ServiceGroup::detach(Observer* o) {
+void Land::detach(Observer* o) {
     if (observers.empty()) {
         std::cout << "Land is empty" << std::endl;
         return;
@@ -23,7 +23,7 @@ void ServiceGroup::detach(Observer* o) {
 
 }
 
-void ServiceGroup::notify(NoticeType notice) {
+void Land::notify(NoticeType notice) {
     for (Observer* observer : observers) {
         observer->update(notice);
     }
@@ -31,7 +31,7 @@ void ServiceGroup::notify(NoticeType notice) {
 
 
 //Observer
-void ServiceGroup::update(NoticeType notice) {
+void Land::update(NoticeType notice) {
     
     notify(notice);
 

@@ -2,6 +2,10 @@
 #define LAND_H
 
 #include "EventGroup.h"
+#include "Subject.h"
+#include "Observer.h"
+
+
 #include <iostream>
 
 using namespace std;
@@ -12,7 +16,7 @@ using namespace std;
  * This file contains the land class which represents a themed area within the event.
  */
 
- class Land : public EventGroup, public Observer{
+ class Land : public EventGroup,public Subject, public Observer{
     private:
         /**
          * @param landName Display name for this land
