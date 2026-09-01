@@ -8,6 +8,9 @@
  * @class FoodKiosk
  * @brief Represents food kiosk operating in park.
  * 
+ * FoodKiosk is a concrete EventUnit and Observer. It receives event
+ * notices and responds by changing its operational state when necessary.
+ * It also keeps track of customers served and profit earned.
  */
 class FoodKiosk : public EventUnit, public Observer
 {

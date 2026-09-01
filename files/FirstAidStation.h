@@ -12,7 +12,7 @@ private:
     bool isOperational;
 
 public:
-     FirstAidStation(const std::string& stationName, int staff);
+    FirstAidStation(const std::string& stationName, int staff);
     ~FirstAidStation() override;
 
     void open() override;
