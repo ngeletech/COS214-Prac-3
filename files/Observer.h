@@ -8,7 +8,9 @@ enum class NoticeType {
     OpenNotice,
     CloseNotice,
     PauseNotice,
-    ResumeNotice
+    ResumeNotice,
+    EvacuationNotice,
+    RushHourNotice
 
 };
 
